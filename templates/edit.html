@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url({{ url_for('static',filename='img/unnamed.jpg') }}">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">In Control of Every Product</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <a href="/adLogIn"><button class="btn btn-outline-success bth_db">Admin Panel</button></a>
+            <style>
+                .bth_db{
+                    margin-right: 20px;
+                }
+            </style>
+            <a href="/logout"><button class="btn btn-outline-danger">Logout</button></a>
+            <hr>
+            <h1>Add/Edit Products</h1>
+            <form name="sentMessage" id="contactForm" action="/edit/{{sno}}" method="post" novalidate>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Product Slug</label>
+                        <input type="text" class="form-control" placeholder="Product Slug" id="prod_slug" name="prod_slug" value="{{prod.slug}}" required data-validation-required-message="Please enter product slug">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Product Title</label>
+                        <input type="text" class="form-control" placeholder="Product Title" id="prod_title" name="prod_title" value="{{prod.title}}" required data-validation-required-message="Please enter product title.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Product Subtitle</label>
+                        <input type="text" class="form-control" placeholder="Product Subtitle" id="prod_subtitle" name="prod_subtitle" value="{{prod.subtitle}}" required data-validation-required-message="Please enter product subtitle.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Product Content</label>
+                        <textarea rows="5" class="form-control" placeholder="Product Content" id="prod_content" name="prod_content" required data-validation-required-message="Please enter product content.">{{prod.content}}</textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Product Image</label>
+                        <input type="text" class="form-control" placeholder="Product Image" id="prod_img" name="prod_img" value="{{prod.img_file}}" required data-validation-required-message="Please enter product image.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <button type="submit" class="btn btn-primary" id="sendMessageButton">Uplode Product</button>
+            </form>
+            <!-- <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for prod in products %}
+                    <tr>
+                        <td>{{prod.sno}}</td>
+                        <td>{{prod.title}}</td>
+                        <td>{{prod.date}}</td>
+                        <td><a href="/edit/{{prod.sno}}"><button class="btn btn-outline-success">Edit</button></a></td>
+                        <td><button class="btn btn-outline-danger">Delete</button></td>
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table> -->
+
+
+        </div>
+    </div>
+</div>
+
+<hr>
+
+{% endblock %}

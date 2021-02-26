@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+ {% block body %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{ url_for('static', filename='img/onlineshop2.jpg') }})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>About Us</h1>
+            <span class="subheading">This is what we do.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>While every Ancora pen is expertly crafted and held to the highest standard of quality, there are three separate tiers of collections available.</p>
+        <p>The unique Limited Edition, the sought-after Limited Production and the refined Classic Series collections vary by production caps, scarcity of used materials and amount of painstaking manual craftsmanship required to produce them, but all offer the famed Ancora style, feel and the signature 18-karat gold nib.</p>
+        <p>Extremely rare collections from 5 to 88 pieces, which are made from unique materials like marble, lava stones, using outstanding hand painted details.</p>
+        <p>Impeccable design, adorned with masterfully painted miniatures. 88-1919 pieces manufactured for each collection.</p>
+        <p>Timeless designs by Ancora masters. Classic Series is known over the years for its nice writing experience and classic shapes. Unique accessories carefully built using the same design philosophy behind the Ancora pens.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  {% endblock %}

@@ -1,0 +1,16 @@
+{
+    "parameters": {
+        "local_server": "True",
+        "site_name": "Ancora",
+        "local_uri": "mysql://root:@localhost/ancora_pens",
+        "production_uri": "mysql://root:@localhost/ancora_pens",
+        "fb_url": "https://www.facebook.com",
+        "tw_url": "https://twitter.com",
+        "git_url": "https://github.com",
+        "MAIL_USERNAME": "_____",
+        "MAIL_PASSWORD": "_____",
+        "no_of_product": 3,
+        "ancora_admin": "_____",
+        "ancora_password": "_____"
+    }
+}
